@@ -1,1 +1,54 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      database: zitroGameDb
+      host: localhost
+      port: 27017
+jwt:
+  secret: SECRET
 
+
+videobingo:
+  id: 8271eb06-aedb-4cce-aa54-9a50205e2786 
+  gameType: VIDEOBINGO
+  jackpotOdds: 15
+  playConfig:
+    maxBet: 100
+    minBet: 1
+    jackpot: 1000
+slot:
+  id: 20f8adb9-c030-4ec2-8b7a-62f730c55ec7
+  gameType: SLOT
+  jackpotOdds: 15
+  playConfig:
+    maxBet: 100
+    minBet: 1
+    jackpot: 1000
+blackjack:
+  id: 6ecf5f7d-96f2-4d03-9d24-57ba90fdaf2d
+  gameType: BLACKJACK
+  jackpotOdds: 100
+  playConfig:
+    maxBet: 100
+    minBet: 1
+    jackpot: 1000
+poker:
+  id: 03b64072-f062-4a99-a8ac-8fb62817fedc
+  gameType: POKER
+  jackpotOdds: 15
+  playConfig:
+    maxBet: 100
+    minBet: 1
+    jackpot: 1000
+ruleta:
+  id: 3d1064dc-fe41-4f27-85cd-f6a63233e365
+  gameType: RULETA
+  jackpotOdds: 15
+  playConfig:
+    maxBet: 100
+    minBet: 1
+    jackpot: 1000    
+    
+    

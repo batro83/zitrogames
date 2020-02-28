@@ -1,10 +1,14 @@
 # Casino zitroGames
 
-Casino ZitroGames. Springboot + MongoDb
+Casino ZitroGames: Springboot + MongoDb + JWT
 
-First of all it is necessary connect with the casino. This service will return a Json Web Token that is necessary user the game. 
+First of all it is necessary to connect with the casino to get a token. This service will return a Json Web Token that is necessary for the each game. Each casino controller needs a JWT.
 
 The player can play until the money runs out or the token expires.  
+
+In MongoDb there are 2 collections, one (user) to check user money balance, and other to save all transactions (transaction).
+
+Feel free to change any configuration of any game in application.yml.
 
 ## Getting Started
 
@@ -20,6 +24,8 @@ In the root of the project run:
 ```
 
 This will build and start one container for the rest api casino and another container with a mongoDb image.
+
+** Remember first to stop the mongoDb service in your computer
 
 
 ### Run with Docker

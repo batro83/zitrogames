@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,8 +35,8 @@ public class BlackJackController {
 
 	@ApiOperation(value = "Play blackjack", notes = "Play blackjack")
 	@PostMapping("/{userId}")
-	public ResponseEntity<HttpStatus> bet(@PathVariable("userId") String userId, @RequestBody @Valid BaseBetDto betDto)
-			throws Exception {
+	public ResponseEntity<HttpStatus> bet(@PathVariable("userId") String userId, @RequestBody @Valid BaseBetDto betDto,
+			@RequestHeader("Authorization") String token) throws Exception {
 		LOG.info("BlackJackController - bet: user {} bet {}", userId, betDto.toString());
 		blackJackService.bet(userId, betDto, blackJackConfig);
 		return ResponseEntity.ok(HttpStatus.OK);

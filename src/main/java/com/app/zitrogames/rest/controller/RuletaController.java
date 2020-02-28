@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,7 +36,7 @@ public class RuletaController {
 	@ApiOperation(value = "Play ruleta", notes = "Play ruleta")
 	@PostMapping("/{userId}")
 	public ResponseEntity<HttpStatus> bet(@PathVariable("userId") String userId,
-			@RequestBody @Valid RuletaBetDto betDto) throws Exception {
+			@RequestBody @Valid RuletaBetDto betDto, @RequestHeader("Authorization") String token) throws Exception {
 		LOG.info("RuletaController - bet: user {} amount {}", userId, betDto.toString());
 
 		ruletaService.bet(userId, betDto, ruletaConfig);

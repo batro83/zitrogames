@@ -33,7 +33,7 @@ public class BlackJackControllerTest {
 
 	@Test
 	public void test001_controller() throws Exception {
-		ResponseEntity<HttpStatus> response = blackJackController.bet("userId", new BaseBetDto());
+		ResponseEntity<HttpStatus> response = blackJackController.bet("userId", new BaseBetDto(), "token");
 		assertEquals(OK, response.getBody());
 		assertEquals(OK, response.getStatusCode());
 	}

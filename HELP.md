@@ -1,6 +1,7 @@
 # Casino zitroGames
 
-Casino ZitroGames.
+Casino ZitroGames. Springboot + MongoDb
+
 First of all it is necessary connect with the casino. This service will return a Json Web Token that is necessary user the game. 
 
 The player can play until the money runs out or the token expires.  
@@ -18,7 +19,7 @@ In the root of the project run:
  docker-compose up 
 ```
 
-This will build and start one container for the rest api and another container with a mongoDb image.
+This will build and start one container for the rest api casino and another container with a mongoDb image.
 
 
 ### Run with Docker

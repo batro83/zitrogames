@@ -62,6 +62,8 @@ DTOs  to return transaction to the player.
 
 More Integration tests and DTOs test.
 
+Handle custom exceptions.
+
 
 ### Reference Documentation
 For further reference, please consider the following sections:
